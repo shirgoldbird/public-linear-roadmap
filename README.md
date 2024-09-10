@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Public Linear Roadmap
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -44,4 +44,9 @@ Follow these steps to set up your environment:
 
 3. Replace `your_linear_api_key_here` with your actual Linear API key.
 
-**Note:** Never commit your `.env` file to version control. Add it to your `.gitignore` file to prevent accidental exposure of sensitive information.
+## TODO
+
+1. GraphQL pagination
+2. Consider how to create a safe, customer-specific dashboard filter. Maybe org ID in URL, similar to our Metabase dashboard? Would need to store mapping of org ID to org name, and then add another filter in the graphql query to get matching those names. (Would also need to consider name mismatches...) (2a. Also allow seeing all issues, without a filter.)
+3. Add a helpful guide as to what status means. "Backlog - medium: will be picked up as bandwidth allows"
+4. Add styling
