@@ -2,11 +2,19 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 
 const GET_ISSUES = gql`
-  query {
-    issues(first: 10) {
+  query CustomerIssues {
+    issues(
+      filter: {
+        and: [
+          { labels: { name: { eq: "Customer Success" } } }
+          { labels: { name: { eq: "Pod - Coverage" } } }
+        ]
+      }
+    ) {
       nodes {
-        id
+        identifier
         title
+        priorityLabel
         state {
           name
         }
